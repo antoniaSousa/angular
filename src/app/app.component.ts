@@ -6,15 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  nome = 'Antonia';
-  adicionado = false;
+  funcionarios =[];
 
-adicionar(){
- console.log (`Adicionando ${this.nome}`)
- const numero = Math.round(Math.random() * 100);
- this.nome = "Joao " + numero;
-}
-alterarNome(event:any){
-  this.nome = event.target.value;
-}
+  aoAdicionar(funcionario){
+    this.funcionarios.push(funcionario);
+
+  }
 }
